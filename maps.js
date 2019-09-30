@@ -95,7 +95,7 @@
   
     
       // Below this is working ok 
-      
+     
       function createMarkers(places) {
         places.forEach(place => {
           let marker = new google.maps.Marker({
@@ -116,7 +116,7 @@
         //       }
         //   }
 
-        // this is not working :-(
+        
           function drop() {
               for (var i =0; i < markerArray.length; i++) {
                 setTimeout(function() {
