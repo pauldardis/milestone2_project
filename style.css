@@ -1,0 +1,28 @@
+#map {
+    height: 50%;
+    width: 50%;
+  }
+  /* Optional: Makes the sample page fill the window. */
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+
+/* Radio buttons styling and layout */
+
+  .radioButtonsDiv {
+    margin-left: 3em;
+}
+
+.radioDiv {
+    float: left;
+    /* width: 33.33%; */
+    padding: 20px;
+      }
+
+      .fa-3x {
+          color: blueviolet;
+      }
+

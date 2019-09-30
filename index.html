@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test map</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
+    <script src="https://kit.fontawesome.com/b0574bd06e.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+  </head>
+  <body>
+
+
+    
+    <h1></h1>
+        </div class="container-fluid">
+        <div class="row radioButtonsDiv">
+            <div class="radioDiv ">
+                <input class="form-check-input" type="radio" name="searchType" id="searchType-rest" 
+                    value="restaurant" onClick="setSearchType(this.value)">
+                <label class=" fas fa-utensils fa-3x" for="searchType-rest"></label>
+            </div>
+            <div class="radioDiv ">
+                <input class="form-check-input" type="radio" name="searchType" id="searchType-bar" 
+                    value="bar" onClick="setSearchType(this.value)">
+                <label class=" fas fa-glass-cheers fa-3x" for="searchType-bar"></label>
+            </div>
+            <div class="radioDiv ">
+                <input class="form-check-input" type="radio" name="searchType" id="searchType-cafe" 
+                    value="cafe" onClick="setSearchType(this.value)">
+                <label class=" fas fa-coffee fa-3x" for="searchType-cafe"></label>
+            </div>
+        </div>
+            <div class="row radioButtonsDiv">
+            <div class="radioDiv">
+                <input class="form-check-input" type="radio" name="searchType" id="searchType-hotel" 
+                    value="lodging" onClick="setSearchType(this.value)">
+                <label class=" fas fa-bed fa-3x" for="searchType-hotel"></label>
+            </div>
+            <div class="radioDiv">
+                <input class="form-check-input" type="radio" name="searchType" id="searchType-atm" 
+                    value="atm" onClick="setSearchType(this.value)">
+                <label class=" fab fa-cc-visa fa-3x" for="searchType-atm"></label>
+            </div>
+            <div class="radioDiv">
+                <input class="form-check-input" type="radio" name="searchType" id="searchType-parking" 
+                    value="parking" onClick="setSearchType(this.value)">
+                <label class=" fas fa-parking fa-3x" for="searchType-parking"></label>
+            </div>
+        </div>
+        <div class="row radioButtonsDiv">
+            <div class="radioDiv">
+                <input class="form-check-input" type="radio" name="searchType" id="searchType-tour" 
+                    value="tourist_attraction" onClick="setSearchType(this.value)">
+                <label class=" fas fa-eye fa-3x" for="searchType-tour"></label>
+            </div>
+            <div class="radioDiv">
+                <input class="form-check-input" type="radio" name="searchType" id="searchType-hospital" 
+                    value="hospital" onClick="setSearchType(this.value)">
+                <label class=" fas fa-ambulance fa-3x" for="searchType-hospital"></label>
+            </div>
+            <div class="radioDiv">
+                <input class="form-check-input" type="radio" name="searchType" id="searchType-gym" 
+                    value="gym" onClick="setSearchType(this.value)">
+                <label class=" fas fa-dumbbell fa-3x" for="searchType-gym"></label>
+            </div>
+        </div>
+
+    
+
+<h1>This is my test google map</h1>
+    <div id="map"></div>
+
+    <!-- async removed as it was intermittently causing issues when fontawesome script was loading  -->
+    <script  defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsRT9p1lFIAXJDYbU-9ZffL95g7a25948&libraries=places&callback=initMap" ></script>
+    <script src="maps.js"></script>
+  </body>
+</html>
