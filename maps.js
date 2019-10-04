@@ -80,22 +80,29 @@
         let request = {
           location: position,
           radius: '700',
-          keyword: pablo
+          type: pablo
         };
         service = new google.maps.places.PlacesService(map);
         service.nearbySearch(request, nearbyCallback);
       }
+      
+      
+      
       // Handle the results (up to 20) of the Nearby Search
       function nearbyCallback(results, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
+          for (var i = 0; i < results.length; i++) {
+            var place = results[i];
+            let price = createPrice (place.price_leve)
+          }
           createMarkers(results);
-          console.log("Marker Type" +results);
+          console.log("Marker Type" +results)
         }
       }
   
     
       // Below this is working ok 
-     
+      
       function createMarkers(places) {
         places.forEach(place => {
           let marker = new google.maps.Marker({
@@ -107,16 +114,16 @@
 
 // This can be removed or maybe modified to disply information when icon is clicked.
 
-        //   marker.addListener('click', toggleBounce);
-        //   function toggleBounce() {
-        //       if (marker.getAnimation() !== null) {
-        //         marker.setAnimation(null);
-        //       } else {
-        //         marker.setAnimation(google.maps.Animation.BOUNCE);
-        //       }
-        //   }
+          marker.addListener('click', toggleBounce);
+          function toggleBounce() {
+              if (marker.getAnimation() !== null) {
+                marker.setAnimation(null);
+              } else {
+                marker.setAnimation(google.maps.Animation.BOUNCE);
+              }
+          }
 
-        
+        // this is not working :-(
           function drop() {
               for (var i =0; i < markerArray.length; i++) {
                 setTimeout(function() {
